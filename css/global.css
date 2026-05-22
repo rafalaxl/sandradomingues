@@ -1,0 +1,172 @@
+/* css/global.css */
+
+/* Importação das fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--lh-body);
+  font-weight: var(--weight-regular);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Títulos Globais */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  line-height: var(--lh-heading);
+  color: var(--color-text-main);
+}
+
+h1 { font-size: var(--size-h1); }
+h2 { font-size: var(--size-h2); }
+h3 { font-size: var(--size-h3); }
+
+/* Layout e Alinhamento */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+}
+
+.section-padding {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+
+/* Acessibilidade: Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--color-gold-primary);
+  color: var(--color-contrast);
+  padding: var(--space-sm) var(--space-lg);
+  z-index: 10000;
+  font-weight: var(--weight-semibold);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+/* Foco Acessível Padrão */
+*:focus-visible {
+  outline: 2px solid var(--color-gold-primary);
+  outline-offset: 4px;
+}
+
+/* Cursor Personalizado (Apenas Desktop) */
+@media (min-width: 1025px) {
+  .custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color-gold-primary);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width var(--transition-fast), height var(--transition-fast), background-color var(--transition-fast);
+  }
+
+  .custom-cursor--hover {
+    width: 40px;
+    height: 40px;
+    background-color: oklch(73.55% 0.134 83.18 / 0.1);
+    border-color: var(--color-gold-light);
+  }
+
+  .custom-cursor--click {
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-gold-primary);
+  }
+
+  /* Oculta cursor padrão apenas quando o customizado estiver ativo e inicializado via JS */
+  .has-custom-cursor,
+  .has-custom-cursor body,
+  .has-custom-cursor a,
+  .has-custom-cursor button,
+  .has-custom-cursor select,
+  .has-custom-cursor input,
+  .has-custom-cursor textarea {
+    cursor: none !important;
+  }
+}
+
+/* Utilitários de Acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Botões Globais */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-2xl);
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  font-size: var(--size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-gold-primary), var(--color-gold-dark));
+  color: var(--color-contrast);
+  box-shadow: var(--shadow-gold-ambient);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold-primary));
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px oklch(73.55% 0.134 83.18 / 0.35);
+}
+
+.btn--secondary {
+  border: 1px solid var(--color-gold-primary);
+  color: var(--color-gold-primary);
+  background: transparent;
+}
+
+.btn--secondary:hover {
+  background-color: oklch(73.55% 0.134 83.18 / 0.05);
+  color: var(--color-gold-dark);
+  border-color: var(--color-gold-dark);
+  transform: translateY(-2px);
+}
+
+/* Efeito de Reveal para Scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 800ms ease, transform 800ms ease;
+}
+
+.reveal--active {
+  opacity: 1;
+  transform: translateY(0);
+}

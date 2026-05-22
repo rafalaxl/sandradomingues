@@ -1,0 +1,75 @@
+/* css/sections/numbers.css */
+
+.numbers {
+  background-color: var(--color-surface);
+  border-top: 1px solid oklch(73.55% 0.134 83.18 / 0.15);
+  border-bottom: 1px solid oklch(73.55% 0.134 83.18 / 0.15);
+  padding: var(--space-3xl) 0;
+}
+
+.numbers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2xl);
+  text-align: center;
+}
+
+.numbers__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Divisores verticais sutis entre as colunas no desktop */
+.numbers__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  right: -12px;
+  height: 70%;
+  width: 1px;
+  background-color: oklch(73.55% 0.134 83.18 / 0.2);
+}
+
+.numbers__val {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: var(--weight-semibold);
+  color: var(--color-gold-primary);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.numbers__label {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
+}
+
+/* Breakpoint para Tablet */
+@media (max-width: 1024px) {
+  .numbers__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3xl);
+  }
+
+  .numbers__item:nth-child(even)::after {
+    display: none;
+  }
+}
+
+/* Breakpoint para Mobile */
+@media (max-width: 480px) {
+  .numbers__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .numbers__item::after {
+    display: none !important;
+  }
+}

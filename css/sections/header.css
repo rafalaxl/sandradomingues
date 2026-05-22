@@ -1,0 +1,166 @@
+/* css/sections/header.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color var(--transition-smooth), padding var(--transition-smooth), box-shadow var(--transition-smooth);
+  padding: var(--space-lg) 0;
+  background-color: transparent;
+}
+
+.header--sticky {
+  background-color: oklch(95.07% 0.005 50 / 0.85); /* --color-base com transparência */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: var(--space-sm) 0;
+  box-shadow: var(--shadow-ambient);
+  border-bottom: 1px solid oklch(73.55% 0.134 83.18 / 0.15);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header__logo-img {
+  height: 48px;
+  width: auto;
+  transition: height var(--transition-smooth);
+}
+
+.header--sticky .header__logo-img {
+  height: 38px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.header__link {
+  font-family: var(--font-body);
+  font-weight: var(--weight-medium);
+  font-size: var(--size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-main);
+  text-decoration: none;
+  position: relative;
+  padding: var(--space-xs) 0;
+  transition: color var(--transition-smooth);
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-gold-primary);
+  transition: width var(--transition-smooth);
+}
+
+.header__link:hover {
+  color: var(--color-gold-primary);
+}
+
+.header__link:hover::after,
+.header__link--active::after {
+  width: 100%;
+}
+
+.header__link--active {
+  color: var(--color-gold-primary);
+  font-weight: var(--weight-semibold);
+}
+
+/* Hamburguer Menu (Mobile) */
+.header__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  z-index: 1100;
+}
+
+.header__toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text-main);
+  transition: transform var(--transition-smooth), opacity var(--transition-smooth), background-color var(--transition-smooth);
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 767px) {
+  .header__toggle {
+    display: flex;
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: var(--color-base);
+    box-shadow: var(--shadow-panel);
+    padding: var(--space-4xl) var(--space-2xl) var(--space-2xl);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right var(--transition-smooth);
+    z-index: 1050;
+  }
+
+  .header__nav--open {
+    right: 0;
+  }
+
+  .header__list {
+    flex-direction: column;
+    gap: var(--space-2xl);
+    width: 100%;
+  }
+
+  .header__link {
+    font-size: 1.1rem;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid oklch(91.68% 0.007 50);
+    padding-bottom: var(--space-sm);
+  }
+
+  /* Hamburguer transformado em X */
+  .header__toggle--open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .header__toggle--open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__toggle--open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

@@ -1,0 +1,281 @@
+/* css/sections/results.css */
+
+.results {
+  background-color: var(--color-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.results__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-4xl) auto;
+}
+
+.results__title {
+  margin-bottom: var(--space-md);
+  font-weight: var(--weight-light);
+}
+
+.results__title strong {
+  font-weight: var(--weight-semibold);
+  color: var(--color-gold-primary);
+}
+
+.results__desc {
+  color: var(--color-text-muted);
+}
+
+/* Galeria Comparativa Antes/Depois */
+.results__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  margin-bottom: var(--space-4xl);
+}
+
+/* Card de Comparação Antes/Depois Deslizante */
+.before-after {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-elevation);
+  border: 1px solid oklch(73.55% 0.134 83.18 / 0.15);
+  user-select: none;
+}
+
+.before-after__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.before-after__image--before {
+  /* Fica por cima e é recortada pela largura do slider */
+  width: 100%;
+  z-index: 10;
+}
+
+.before-after__image--after {
+  z-index: 5;
+}
+
+/* Rótulos 'Antes' e 'Depois' */
+.before-after__label {
+  position: absolute;
+  bottom: var(--space-lg);
+  background-color: oklch(18.06% 0 0 / 0.6);
+  backdrop-filter: blur(5px);
+  color: var(--color-contrast);
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--size-small);
+  text-transform: uppercase;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.before-after__label--before {
+  left: var(--space-lg);
+}
+
+.before-after__label--after {
+  right: var(--space-lg);
+}
+
+/* Slider Input transparente para controle de deslize */
+.before-after__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 30;
+  margin: 0;
+}
+
+/* Barra de divisão central dourada */
+.before-after__handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: var(--color-gold-primary);
+  z-index: 25;
+  pointer-events: none;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px var(--color-gold-primary);
+}
+
+.before-after__handle::after {
+  content: '↔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-gold-primary);
+  border: 2px solid var(--color-base);
+  color: var(--color-contrast);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-elevation);
+}
+
+/* Carrossel de Depoimentos */
+.testimonials {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-4xl);
+}
+
+.testimonials__slider {
+  overflow: hidden;
+}
+
+.testimonials__track {
+  display: flex;
+  transition: transform var(--transition-smooth);
+}
+
+.testimonial-card {
+  min-width: 100%;
+  padding: var(--space-xl);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.testimonial-card__quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-style: italic;
+  line-height: var(--lh-body);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-2xl);
+  position: relative;
+}
+
+.testimonial-card__quote::before {
+  content: '“';
+  font-size: 4rem;
+  color: oklch(73.55% 0.134 83.18 / 0.15);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: serif;
+  line-height: 1;
+}
+
+.testimonial-card__client {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-card__name {
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  color: var(--color-gold-primary);
+  font-size: var(--size-body);
+  margin-bottom: var(--space-xs);
+}
+
+.testimonial-card__treatment {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+}
+
+/* Botões do Carrossel */
+.testimonials__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-base);
+  border: 1px solid oklch(73.55% 0.134 83.18 / 0.2);
+  color: var(--color-gold-primary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all var(--transition-smooth);
+  box-shadow: var(--shadow-ambient);
+}
+
+.testimonials__btn:hover {
+  background-color: var(--color-gold-primary);
+  color: var(--color-contrast);
+  border-color: var(--color-gold-primary);
+  box-shadow: var(--shadow-gold-ambient);
+}
+
+.testimonials__btn--prev {
+  left: 0;
+}
+
+.testimonials__btn--next {
+  right: 0;
+}
+
+.testimonials__btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Indicadores de bolinha (dots) */
+.testimonials__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+.testimonials__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: oklch(73.55% 0.134 83.18 / 0.3);
+  transition: background-color var(--transition-smooth), transform var(--transition-smooth);
+}
+
+.testimonials__dot--active {
+  background-color: var(--color-gold-primary);
+  transform: scale(1.3);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .testimonials {
+    padding: 0 var(--space-2xl);
+  }
+
+  .testimonials__btn {
+    display: none; /* Em telas menores, navegação será por swipe */
+  }
+}
+
+@media (max-width: 768px) {
+  .results__gallery {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}

@@ -1,0 +1,142 @@
+/* css/sections/protocolo.css */
+
+.protocolo {
+  background-color: var(--color-surface);
+  position: relative;
+}
+
+.protocolo__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.protocolo__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.protocolo__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: var(--space-xs) var(--space-md);
+  background-color: oklch(73.55% 0.134 83.18 / 0.08);
+  border: 1px solid var(--color-gold-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-gold-primary);
+  font-size: var(--size-small);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-lg);
+}
+
+.protocolo__title {
+  margin-bottom: var(--space-xl);
+  font-weight: var(--weight-light);
+}
+
+.protocolo__title strong {
+  font-weight: var(--weight-semibold);
+  color: var(--color-gold-primary);
+}
+
+.protocolo__text {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+}
+
+.protocolo__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-3xl);
+}
+
+.protocolo__benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.protocolo__benefit-icon {
+  color: var(--color-gold-primary);
+  margin-top: 2px;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.protocolo__benefit-content h3 {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-main);
+  margin-bottom: 2px;
+}
+
+.protocolo__benefit-content p {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  line-height: var(--lh-body);
+}
+
+.protocolo__visual {
+  position: relative;
+  width: 100%;
+}
+
+.protocolo__img-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-elevation);
+  border: 1px solid oklch(73.55% 0.134 83.18 / 0.2);
+}
+
+.protocolo__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Efeito de brilho de luz de fundo */
+.protocolo__visual::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, oklch(82.9% 0.125 84.77 / 0.1) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .protocolo__grid {
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .protocolo__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .protocolo__visual {
+    max-width: 480px;
+    margin: 0 auto;
+    order: 2;
+  }
+
+  .protocolo__content {
+    order: 1;
+  }
+}
