@@ -38,7 +38,7 @@
 .before-after {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/5; /* Ajustado para proporção vertical 1080x1350 */
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-elevation);
