@@ -310,4 +310,43 @@
   .modal__actions {
     flex-direction: column;
   }
+
+  /* Collapse: esconde a partir do 7º card */
+  .services__grid--collapsed .service-card:nth-child(n+7) {
+    display: none;
+  }
 }
+
+/* Botão "Ver todos os serviços / Ver menos" */
+.services__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin: var(--space-3xl) auto 0 auto;
+  padding: var(--space-md) var(--space-2xl);
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gold-primary);
+  background: transparent;
+  border: 1px solid oklch(73.55% 0.134 83.18 / 0.3);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-smooth);
+  cursor: pointer;
+}
+
+.services__toggle:hover {
+  background-color: oklch(73.55% 0.134 83.18 / 0.05);
+  border-color: var(--color-gold-primary);
+}
+
+.services__toggle .expand-btn__icon {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-smooth);
+  flex-shrink: 0;
+}
+

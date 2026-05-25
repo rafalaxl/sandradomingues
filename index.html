@@ -236,12 +236,12 @@
             <button class="service-card__btn" aria-haspopup="dialog">Saiba mais <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </article>
 
-          <article class="service-card" data-category="rehab" data-full-desc="Atendimento terapêutico especializado com drenagens seguras e tratamentos adaptados individualmente para a gestante e no puerpério imediato/tardio.">
+          <article class="service-card" data-category="rehab" data-full-desc="Atendimento terapêutico especializado com drenagens seguras, fechamento de diástase abdominal e tratamentos adaptados individualmente para a gestante e no puerpério imediato/tardio. A diástase — separação do músculo reto abdominal — é uma condição comum após a gravidez que deixa o abdômen proeminente mesmo sem excesso de gordura. Nosso protocolo de fortalecimento do core e taping é referência em resultados para devolver a firmeza e a funcionalidade da parede abdominal.">
             <div class="service-card__icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
             </div>
             <h3 class="service-card__title">Pré e Pós-Parto</h3>
-            <p class="service-card__desc">Acompanhamento e drenagens linfáticas seguras e suaves para gestantes e no puerpério.</p>
+            <p class="service-card__desc">Drenagem, fechamento de diástase e reabilitação completa para gestantes e no puerpério.</p>
             <button class="service-card__btn" aria-haspopup="dialog">Saiba mais <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </article>
 
@@ -382,12 +382,12 @@
             <button class="service-card__btn" aria-haspopup="dialog">Saiba mais <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </article>
 
-          <article class="service-card" data-category="tech" data-full-desc="Estimulação eletro-neuromuscular via Corrente Russa ou TENS. Atua forçando a hipertrofia e a tonificação de fibras musculares fadigadas ou em reabilitação (Core e Glúteos).">
+          <article class="service-card" data-category="tech" data-full-desc="Estimulação eletro-neuromuscular via Corrente Russa ou TENS. Atua forçando a hipertrofia e a tonificação de fibras musculares fadigadas ou em reabilitação (Core e Glúteos). Essencial no tratamento de diástase abdominal: o fortalecimento progressivo do reto abdominal promove o fechamento da separação muscular, devolvendo a firmeza e a funcionalidade do abdômen.">
             <div class="service-card__icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
             </div>
             <h3 class="service-card__title">Fortalecimento Muscular</h3>
-            <p class="service-card__desc">Eletroestimulação por Corrente Russa/TENS para ganho de tônus e fortalecimento do core.</p>
+            <p class="service-card__desc">Eletroestimulação para ganho de tônus, fortalecimento do core e fechamento de diástase.</p>
             <button class="service-card__btn" aria-haspopup="dialog">Saiba mais <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
           </article>
 
@@ -447,6 +447,18 @@
           </article>
 
         </div>
+
+        <!-- Botão expandir/colapsar serviços (visível apenas no mobile) -->
+        <button class="services__toggle"
+                data-expand-target="#services-grid"
+                data-expand-collapsed-class="services__grid--collapsed"
+                data-expand-label-more="Ver todos os serviços"
+                data-expand-label-less="Ver menos"
+                aria-expanded="false">
+          <span class="expand-btn__text">Ver todos os serviços</span>
+          <svg class="expand-btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+
       </div>
     </section>
 
@@ -497,7 +509,49 @@
             <!-- Controle deslizante acessível -->
             <input type="range" class="before-after__slider" min="0" max="100" value="50" aria-label="Mova para comparar o antes e depois da reabilitação pós-parto">
           </div>
+
+          <!-- Item Comparador 3 (Pós-Operatório) -->
+          <div class="before-after" aria-label="Comparativo antes e depois de pós-operatório">
+            <img class="before-after__image before-after__image--after" src="assets/images/depois_tres.webp" alt="Resultado de recuperação pós-operatória com contorno corporal definido" loading="lazy">
+            <img class="before-after__image before-after__image--before" src="assets/images/antes_tres.webp" alt="Corpo antes da reabilitação pós-operatória" loading="lazy">
+            <span class="before-after__label before-after__label--before">Antes</span>
+            <span class="before-after__label before-after__label--after">Depois</span>
+            <div class="before-after__handle"></div>
+            <input type="range" class="before-after__slider" min="0" max="100" value="50" aria-label="Mova para comparar o antes e depois do pós-operatório">
+          </div>
+
+          <!-- Item Comparador 4 (Emagrecimento / Protocolo) -->
+          <div class="before-after" aria-label="Comparativo antes e depois do Protocolo de Emagrecimento">
+            <img class="before-after__image before-after__image--after" src="assets/images/depois_quatro.webp" alt="Resultado do Protocolo Sandra Domingues com redução de medidas e contorno definido" loading="lazy">
+            <img class="before-after__image before-after__image--before" src="assets/images/antes_quatro.webp" alt="Silhueta antes do tratamento de emagrecimento" loading="lazy">
+            <span class="before-after__label before-after__label--before">Antes</span>
+            <span class="before-after__label before-after__label--after">Depois</span>
+            <div class="before-after__handle"></div>
+            <input type="range" class="before-after__slider" min="0" max="100" value="50" aria-label="Mova para comparar o antes e depois do protocolo de emagrecimento">
+          </div>
+
+          <!-- Item Comparador 5 (Diástase / Pré e Pós-Parto) -->
+          <div class="before-after" aria-label="Comparativo antes e depois do fechamento de diástase">
+            <img class="before-after__image before-after__image--after" src="assets/images/depois_cinco.webp" alt="Abdômen firme após fechamento de diástase e fortalecimento do core" loading="lazy">
+            <img class="before-after__image before-after__image--before" src="assets/images/antes_cinco.webp" alt="Abdômen com diástase abdominal visível antes do tratamento" loading="lazy">
+            <span class="before-after__label before-after__label--before">Antes</span>
+            <span class="before-after__label before-after__label--after">Depois</span>
+            <div class="before-after__handle"></div>
+            <input type="range" class="before-after__slider" min="0" max="100" value="50" aria-label="Mova para comparar o antes e depois do fechamento de diástase">
+          </div>
+
         </div>
+
+        <!-- Botão expandir/colapsar galeria (visível apenas no mobile) -->
+        <button class="results__gallery-toggle"
+                data-expand-target=".results__gallery"
+                data-expand-collapsed-class="results__gallery--collapsed"
+                data-expand-label-more="Ver mais resultados"
+                data-expand-label-less="Ver menos"
+                aria-expanded="false">
+          <span class="expand-btn__text">Ver mais resultados</span>
+          <svg class="expand-btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
 
         <!-- Carrossel de Depoimentos -->
         <div class="testimonials" aria-label="Depoimentos de clientes">
@@ -561,7 +615,32 @@
           <p class="protocolo__text">
             O Protocolo Sandra Domingues é o nosso método autoral de maior sucesso para emagrecimento saudável e redução de medidas. O programa é desenhado a partir da avaliação biomédica das suas curvas e queixa corporal.
           </p>
-          
+
+          <!-- Destaque Numérico de Resultados -->
+          <div class="protocolo__highlights" aria-label="Resultados comprovados do Protocolo Sandra Domingues">
+            <div class="protocolo__highlight-item">
+              <span class="protocolo__highlight-value">–10 kg</span>
+              <span class="protocolo__highlight-label">Perda de peso</span>
+            </div>
+            <div class="protocolo__highlight-item">
+              <span class="protocolo__highlight-value">–25 cm</span>
+              <span class="protocolo__highlight-label">Redução abdominal</span>
+            </div>
+            <div class="protocolo__highlight-item">
+              <span class="protocolo__highlight-value">45 dias</span>
+              <span class="protocolo__highlight-label">Para resultados visíveis</span>
+            </div>
+          </div>
+
+          <!-- Informativo sobre Diástase -->
+          <div class="protocolo__info-box">
+            <svg class="protocolo__info-box-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div class="protocolo__info-box-content">
+              <h3>Você sabia? Barriga avantajada nem sempre é gordura.</h3>
+              <p>Muitas mulheres apresentam o abdômen proeminente por conta da diástase abdominal — a separação do músculo reto abdominal, comum após gestações. O fechamento da diástase é um dos pilares do nosso trabalho, devolvendo firmeza, funcionalidade e autoestima sem cirurgia.</p>
+            </div>
+          </div>
+
           <div class="protocolo__benefits">
             <div class="protocolo__benefit-item">
               <svg class="protocolo__benefit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
