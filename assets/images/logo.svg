@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 60" width="340" height="60">
+  <g transform="translate(10, 0)">
+    <!-- Círculo externo dourado principal (#C9A84C) -->
+    <circle cx="30" cy="30" r="24" fill="none" stroke="#C9A84C" stroke-width="1.2" />
+    <!-- Círculo interno dourado pontilhado -->
+    <circle cx="30" cy="30" r="20" fill="none" stroke="#E2C97E" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.85" />
+    
+    <!-- Elementos do Monograma S / D em linhas finas vetoriais -->
+    <!-- Letra 'S' estilizada -->
+    <path d="M 28 21 C 23 21, 22 26, 27 28 C 32 30, 32 36, 27 36 C 23 36, 24 32, 24 32" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Letra 'D' estilizada (entrelaçada) -->
+    <path d="M 26 17 L 32 17 C 38 17, 38 37, 32 37 L 26 37" fill="none" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Pequeno detalhe/losango dourado central de brilho -->
+    <path d="M 30 13 L 32 15 L 30 17 L 28 15 Z" fill="#E2C97E" opacity="0.9" />
+  </g>
+  
+  <!-- Textos de Marca -->
+  <!-- "SPAZIO" em Dourado com espaçamento nobre -->
+  <text x="82" y="27" font-family="'Cormorant Garamond', Georgia, Cambria, 'Times New Roman', serif" font-size="20" font-weight="600" fill="#C9A84C" letter-spacing="0.18em">SPAZIO</text>
+  <!-- "DOMINGUES" em Dourado -->
+  <text x="174" y="27" font-family="'Cormorant Garamond', Georgia, Cambria, 'Times New Roman', serif" font-size="20" font-weight="400" fill="#C9A84C" letter-spacing="0.18em">DOMINGUES</text>
+  <!-- Linha divisória sutil -->
+  <line x1="82" y1="36" x2="300" y2="36" stroke="#C9A84C" stroke-width="0.6" opacity="0.5" />
+  <!-- Subtítulo "ESTÉTICA & SAÚDE" -->
+  <text x="83" y="48" font-family="'Jost', -apple-system, sans-serif" font-size="8.5" font-weight="400" fill="#8B6914" letter-spacing="0.4em">ESTÉTICA &amp; SAÚDE</text>
+</svg>
