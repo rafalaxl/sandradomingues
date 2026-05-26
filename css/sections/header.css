@@ -58,7 +58,7 @@
   font-size: var(--size-small);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-text-main);
+  color: var(--color-contrast); /* Branco por padrão sobre o Hero escuro */
   text-decoration: none;
   position: relative;
   padding: var(--space-xs) 0;
@@ -90,6 +90,11 @@
   font-weight: var(--weight-semibold);
 }
 
+/* Cor do link no estado Sticky (fundo claro) */
+.header--sticky .header__link {
+  color: var(--color-text-main);
+}
+
 /* Hamburguer Menu (Mobile) */
 .header__toggle {
   display: none;
@@ -106,8 +111,14 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--color-text-main);
+  background-color: var(--color-contrast); /* Branco por padrão no topo */
   transition: transform var(--transition-smooth), opacity var(--transition-smooth), background-color var(--transition-smooth);
+}
+
+/* Toggle escuro quando sticky ou quando o menu móvel estiver aberto */
+.header--sticky .header__toggle span,
+.header__toggle--open span {
+  background-color: var(--color-text-main);
 }
 
 /* Mobile Breakpoint */
@@ -147,6 +158,7 @@
     font-size: 1.1rem;
     width: 100%;
     display: block;
+    color: var(--color-text-main); /* Escuro para legibilidade no drawer claro */
     border-bottom: 1px solid oklch(91.68% 0.007 50);
     padding-bottom: var(--space-sm);
   }
