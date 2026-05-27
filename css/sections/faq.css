@@ -1,0 +1,115 @@
+/* css/sections/faq.css */
+
+.faq {
+  background-color: var(--color-base);
+  position: relative;
+  border-top: 1px solid oklch(73.55% 0.134 83.18 / 0.15);
+}
+
+.faq__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-3xl) auto;
+}
+
+.faq__title {
+  margin-bottom: var(--space-lg);
+  font-weight: var(--weight-light);
+}
+
+.faq__title strong {
+  font-weight: var(--weight-semibold);
+  color: var(--color-gold-primary);
+}
+
+.faq__desc {
+  color: var(--color-text-muted);
+}
+
+.faq__accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.faq__item {
+  background-color: var(--color-surface);
+  border: 1px solid oklch(73.55% 0.134 83.18 / 0.1);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.faq__item:hover {
+  border-color: oklch(73.55% 0.134 83.18 / 0.4);
+  box-shadow: var(--shadow-ambient);
+}
+
+/* Trigger Button */
+.faq__trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.faq__trigger:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.faq__trigger:hover {
+  color: var(--color-gold-primary);
+}
+
+.faq__icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-gold-primary);
+  flex-shrink: 0;
+  transition: transform var(--transition-smooth);
+}
+
+.faq__trigger[aria-expanded="true"] .faq__icon {
+  transform: rotate(180deg);
+}
+
+/* Painel com a resposta */
+.faq__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-smooth);
+}
+
+.faq__content {
+  padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
+  font-size: var(--size-body);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+.faq__content p {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq__item,
+  .faq__trigger,
+  .faq__icon,
+  .faq__panel {
+    transition: none !important;
+  }
+}

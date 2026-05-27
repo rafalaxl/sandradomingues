@@ -6,6 +6,7 @@ import { initResults } from './modules/results.js';
 import { initCustomCursor } from './modules/cursor.js';
 import { initBookingForm } from './modules/booking.js';
 import { initExpandable } from './modules/expandable.js';
+import { initFaq } from './modules/faq.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Inicialização de módulos
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCustomCursor();
   initBookingForm();
   initExpandable();
+  initFaq();
 
   // Efeito de Reveal (fade-in com subida suave) ao scroll
   const reveals = document.querySelectorAll('.reveal');

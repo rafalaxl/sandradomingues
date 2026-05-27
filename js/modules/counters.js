@@ -14,6 +14,8 @@ export function initCounters() {
       return;
     }
 
+    counter.textContent = '0'; // Força o reset para zero antes de iniciar o contador visual
+
     const duration = 1500; // Tempo total da animação em milissegundos
     const startTime = performance.now();
 
