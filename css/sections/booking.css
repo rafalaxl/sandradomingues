@@ -24,7 +24,7 @@
 
 .booking__title strong {
   font-weight: var(--weight-semibold);
-  color: var(--color-gold-primary);
+  color: var(--color-gold-dark);
 }
 
 .booking__text {
@@ -81,7 +81,7 @@
 .booking__form-container {
   width: 100%;
   background-color: var(--color-surface);
-  border: 1px solid oklch(73.55% 0.134 83.18 / 0.15);
+  border: 1px solid var(--color-gold-alpha-15);
   border-radius: var(--radius-lg);
   padding: var(--space-2xl);
   box-shadow: var(--shadow-elevation);
@@ -120,7 +120,7 @@
   font-size: var(--size-body);
   color: var(--color-text-main);
   background-color: var(--color-base);
-  border: 1px solid oklch(73.55% 0.134 83.18 / 0.2);
+  border: 1px solid var(--color-gold-alpha-20);
   border-radius: var(--radius-md);
   padding: var(--space-md) var(--space-lg);
   width: 100%;
@@ -193,6 +193,14 @@
 
 .booking__submit-btn:hover svg {
   transform: translate(2px, -2px);
+}
+
+.booking__consent-text {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  line-height: var(--lh-body);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-xs);
 }
 
 /* Responsividade */

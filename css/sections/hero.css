@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   padding-top: 120px; /* Compensa o header fixo */
-  background-color: oklch(18.06% 0 0); /* Fundo escuro padrão de fallback */
+  background-color: var(--color-text-main); /* Fundo escuro padrão de fallback */
   overflow: hidden;
 }
 
@@ -33,9 +33,9 @@
   height: 100%;
   background: linear-gradient(
     180deg,
-    oklch(18.06% 0 0 / 0.6) 0%,
-    oklch(18.06% 0 0 / 0.75) 60%,
-    oklch(18.06% 0 0 / 0.92) 100%
+    var(--color-dark-alpha-60) 0%,
+    var(--color-dark-alpha-75) 60%,
+    var(--color-dark-alpha-92) 100%
   );
   z-index: 2;
   pointer-events: none;
@@ -103,7 +103,7 @@
 
 .hero__text {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: oklch(100% 0 0 / 0.8); /* Branco translúcido */
+  color: var(--color-white-alpha-80); /* Branco translúcido */
   margin-bottom: var(--space-3xl);
   max-width: 600px;
   line-height: var(--lh-body);

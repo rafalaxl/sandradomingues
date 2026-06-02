@@ -1,3 +1,4 @@
 # Configuração do Git - Omitir arquivos de governança do repositório
 CLAUDE.md
-projeto/DESIGN.md
+projeto/
+.agents/

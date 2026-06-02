@@ -21,7 +21,7 @@
   display: inline-flex;
   align-self: flex-start;
   padding: var(--space-xs) var(--space-md);
-  background-color: oklch(73.55% 0.134 83.18 / 0.08);
+  background-color: var(--color-gold-alpha-08);
   border: 1px solid var(--color-gold-primary);
   border-radius: var(--radius-sm);
   color: var(--color-gold-primary);
@@ -39,7 +39,7 @@
 
 .protocolo__title strong {
   font-weight: var(--weight-semibold);
-  color: var(--color-gold-primary);
+  color: var(--color-gold-dark);
 }
 
 .protocolo__text {
@@ -53,9 +53,9 @@
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
   padding: var(--space-xl);
-  border: 1px solid oklch(73.55% 0.134 83.18 / 0.25);
+  border: 1px solid var(--color-gold-alpha-25);
   border-radius: var(--radius-md);
-  background-color: oklch(73.55% 0.134 83.18 / 0.04);
+  background-color: var(--color-gold-alpha-04);
   margin-bottom: var(--space-xl);
   text-align: center;
 }
@@ -88,7 +88,7 @@
   gap: var(--space-md);
   padding: var(--space-lg);
   border-left: 3px solid var(--color-gold-primary);
-  background-color: oklch(73.55% 0.134 83.18 / 0.04);
+  background-color: var(--color-gold-alpha-04);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   margin-bottom: var(--space-xl);
 }
@@ -161,7 +161,7 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-elevation);
-  border: 1px solid oklch(73.55% 0.134 83.18 / 0.2);
+  border: 1px solid var(--color-gold-alpha-20);
 }
 
 .protocolo__img {
@@ -180,7 +180,7 @@
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
-  background: radial-gradient(circle, oklch(82.9% 0.125 84.77 / 0.1) 0%, transparent 60%);
+  background: radial-gradient(circle, var(--color-gold-light-alpha-10) 0%, transparent 60%);
   z-index: -1;
   pointer-events: none;
 }

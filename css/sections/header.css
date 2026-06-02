@@ -12,12 +12,12 @@
 }
 
 .header--sticky {
-  background-color: oklch(95.07% 0.005 50 / 0.85); /* --color-base com transparência */
+  background-color: var(--color-base-alpha-85); /* --color-base com transparência */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: var(--space-sm) 0;
   box-shadow: var(--shadow-ambient);
-  border-bottom: 1px solid oklch(73.55% 0.134 83.18 / 0.15);
+  border-bottom: 1px solid var(--color-gold-alpha-15);
 }
 
 .header__container {
@@ -159,7 +159,7 @@
     width: 100%;
     display: block;
     color: var(--color-text-main); /* Escuro para legibilidade no drawer claro */
-    border-bottom: 1px solid oklch(91.68% 0.007 50);
+    border-bottom: 1px solid var(--color-surface);
     padding-bottom: var(--space-sm);
   }
 

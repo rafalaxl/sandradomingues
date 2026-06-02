@@ -1,0 +1,78 @@
+/* css/sections/legal.css */
+
+.legal {
+  padding-top: calc(var(--space-section) + 80px); /* Respiro para compensar o header fixo sticky */
+  padding-bottom: var(--space-section);
+  background-color: var(--color-base);
+}
+
+.legal__container {
+  max-width: 800px; /* Largura ideal recomendada de leitura para textos longos */
+}
+
+.legal__header {
+  margin-bottom: var(--space-3xl);
+  border-bottom: 1px solid var(--color-gold-alpha-15);
+  padding-bottom: var(--space-xl);
+}
+
+.legal__title {
+  font-family: var(--font-display);
+  font-size: var(--size-h1);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-sm);
+  font-weight: var(--weight-light);
+}
+
+.legal__title strong {
+  font-weight: var(--weight-semibold);
+  color: var(--color-gold-dark);
+}
+
+.legal__updated {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+}
+
+.legal__content {
+  font-family: var(--font-body);
+  color: var(--color-text-main);
+  line-height: var(--lh-body);
+}
+
+.legal__content h2 {
+  font-family: var(--font-display);
+  font-size: var(--size-h3);
+  color: var(--color-gold-dark);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+  font-weight: var(--weight-semibold);
+}
+
+.legal__content p {
+  margin-bottom: var(--space-lg);
+  color: var(--color-text-muted);
+}
+
+.legal__content ul,
+.legal__content ol {
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-xl);
+  color: var(--color-text-muted);
+}
+
+.legal__content li {
+  margin-bottom: var(--space-sm);
+}
+
+.legal__content a {
+  color: var(--color-gold-deeper);
+  text-decoration: none;
+  font-weight: var(--weight-medium);
+  transition: color var(--transition-fast);
+}
+
+.legal__content a:hover {
+  color: var(--color-gold-dark);
+}

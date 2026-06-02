@@ -3,7 +3,7 @@
 .faq {
   background-color: var(--color-base);
   position: relative;
-  border-top: 1px solid oklch(73.55% 0.134 83.18 / 0.15);
+  border-top: 1px solid var(--color-gold-alpha-15);
 }
 
 .faq__header {
@@ -19,7 +19,7 @@
 
 .faq__title strong {
   font-weight: var(--weight-semibold);
-  color: var(--color-gold-primary);
+  color: var(--color-gold-dark);
 }
 
 .faq__desc {
@@ -36,14 +36,14 @@
 
 .faq__item {
   background-color: var(--color-surface);
-  border: 1px solid oklch(73.55% 0.134 83.18 / 0.1);
+  border: 1px solid var(--color-gold-alpha-10);
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .faq__item:hover {
-  border-color: oklch(73.55% 0.134 83.18 / 0.4);
+  border-color: var(--color-gold-alpha-40);
   box-shadow: var(--shadow-ambient);
 }
 

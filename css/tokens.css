@@ -6,9 +6,32 @@
   --color-gold-primary: oklch(73.55% 0.134 83.18); /* #C9A84C - Destaques, bordas, títulos */
   --color-gold-light: oklch(82.9% 0.125 84.77);   /* #E2C97E - Efeitos de luz, gradientes, hovers */
   --color-gold-dark: oklch(50.81% 0.135 81.33);    /* #8B6914 - Links ativos, botões hover */
+  --color-gold-deeper: oklch(42% 0.11 81.33);      /* Bronze/dourado bem profundo para acessibilidade (WCAG AA) */
+  
+  /* Opacidades de Dourado */
+  --color-gold-alpha-04: oklch(73.55% 0.134 83.18 / 0.04);
+  --color-gold-alpha-05: oklch(73.55% 0.134 83.18 / 0.05);
+  --color-gold-alpha-08: oklch(73.55% 0.134 83.18 / 0.08);
+  --color-gold-alpha-10: oklch(73.55% 0.134 83.18 / 0.10);
+  --color-gold-alpha-15: oklch(73.55% 0.134 83.18 / 0.15);
+  --color-gold-alpha-20: oklch(73.55% 0.134 83.18 / 0.20);
+  --color-gold-alpha-25: oklch(73.55% 0.134 83.18 / 0.25);
+  --color-gold-alpha-30: oklch(73.55% 0.134 83.18 / 0.30);
+  --color-gold-alpha-40: oklch(73.55% 0.134 83.18 / 0.40);
+
+  /* Outras Opacidades e Auxiliares */
+  --color-base-alpha-85: oklch(95.07% 0.005 50 / 0.85);
+  --color-dark-alpha-60: oklch(18.06% 0 0 / 0.60);
+  --color-dark-alpha-75: oklch(18.06% 0 0 / 0.75);
+  --color-dark-alpha-92: oklch(18.06% 0 0 / 0.92);
+  --color-white-alpha-80: oklch(100% 0 0 / 0.80);
+  --color-gold-light-alpha-10: oklch(82.9% 0.125 84.77 / 0.10);
+
+
   --color-text-main: oklch(18.06% 0 0);           /* #1A1A1A - Texto principal */
   --color-text-muted: oklch(44.38% 0 0);          /* #5C5C5C - Descrições e textos de suporte */
   --color-contrast: oklch(100% 0 0);              /* #FFFFFF - Texto sobre dourado escuro */
+
 
   /* Tipografia */
   --font-display: 'Cormorant Garamond', Georgia, Cambria, serif;

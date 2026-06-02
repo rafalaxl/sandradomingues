@@ -2,8 +2,8 @@
 
 .numbers {
   background-color: var(--color-surface);
-  border-top: 1px solid oklch(73.55% 0.134 83.18 / 0.15);
-  border-bottom: 1px solid oklch(73.55% 0.134 83.18 / 0.15);
+  border-top: 1px solid var(--color-gold-alpha-15);
+  border-bottom: 1px solid var(--color-gold-alpha-15);
   padding: var(--space-3xl) 0;
 }
 
@@ -29,7 +29,7 @@
   right: -12px;
   height: 70%;
   width: 1px;
-  background-color: oklch(73.55% 0.134 83.18 / 0.2);
+  background-color: var(--color-gold-alpha-20);
 }
 
 .numbers__val {
